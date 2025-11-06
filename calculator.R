@@ -28,8 +28,8 @@ single_method <- function(operation)
 
 bulk_method <- function(operation)
 {
-  cat("Input numbers: ")
-  numbers = scan()
+  cat("Enter numbers separated by space, then press Enter:\n")
+  numbers <- scan()
   
   result <- switch(
     operations,
