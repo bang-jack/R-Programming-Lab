@@ -1,4 +1,6 @@
 Note.txt
 basic.R
-Linear_Regression/Task_1_Income_vs_Happiness/
+Linear_Regression/Task_1_Income_vs_Happiness/*
+!Linear_Regression/Task_1_Income_vs_Happiness/main.R
+!Linear_Regression/Task_1_Income_vs_Happiness/income_vs_happiness_dataset.xlsx
 .Rhistory
