@@ -18,7 +18,7 @@ After importing the data, ensure numeric columns are properly typed, especially 
 data <- data %>%
   mutate(
     happiness = as.numeric(happiness),
-    income_x = as.numeric(income_x)
+    income = as.numeric(income)
   )
 ```
 
@@ -41,7 +41,7 @@ ggplot(data, aes(x = happiness)) +
 
 ## 📈 2️⃣ Checking Linearity (Scatter Plot)
 ```
-ggplot(data, aes(x = income_x, y = happiness)) +
+ggplot(data, aes(x = income, y = happiness)) +
   geom_point(color = "blue") +
   labs(
     title = "Scatter Plot: Income vs Happiness",
@@ -57,7 +57,7 @@ ggplot(data, aes(x = income_x, y = happiness)) +
 
 ## 📐 3️⃣ Simple Linear Regression Model
 ```
-model <- lm(happiness ~ income_x, data = data)
+model <- lm(happiness ~ income, data = data)
 summary(model)
 ```
 
@@ -83,7 +83,7 @@ plot(model, which = 1)
 
 ## 🎨 5️⃣ Final Regression Visualization
 ```
-ggplot(data, aes(x = income_x, y = happiness)) +
+ggplot(data, aes(x = income, y = happiness)) +
   geom_point(color = "blue") +
   geom_smooth(method = "lm", se = FALSE, color = "red") +
   stat_regline_equation(label.y = max(data$happiness)) +
